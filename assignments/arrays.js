@@ -339,7 +339,7 @@ let lastCar = 0;
 
 for (let i = 0; i < inventory.length; i++) {
   if (inventory[i] === inventory[inventory.length - 1]) {
-    console.log(inventory[i]);
+    console.log(inventory[i].car_make + ` ` + inventory[i].car_model);
   }
 }
 
@@ -349,9 +349,7 @@ for (let i = 0; i < inventory.length; i++) {
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 let carModels = [];
 for (let i = 0; i < inventory.length; i++) {
-  if (!carModels.includes(inventory[i].car_model)) {
-    carModels.push(inventory[i].car_model);
-  }
+  carModels.push(inventory[i].car_model);
 }
 
 carModels.sort();
@@ -362,14 +360,11 @@ console.log(carModels);
 
 let carYears = [];
 
-for (let i = 0; i < inventory.length; i++) {
-  //  console.log(inventory[i].car_year);
-  const year = inventory[i].car_year;
-  //  console.log(year);
-  carYears.push(year);
-  console.log(carYears);
+for (i = 0; i < inventory.length; i++) {
+  carYears.push(inventory[i].car_year);
 }
-
+carYears.sort();
+console.log(carYears);
 
 
 // ==== Challenge 5 ====
