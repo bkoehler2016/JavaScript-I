@@ -77,7 +77,7 @@ console.log(Antonietta.gender);
 // console.log(kennan.speak());
 
 let kennan = {
-  speak: function() {
+  speak: function () {
     console.log('Hello, my name is Kennan!');
   }
 };
@@ -87,12 +87,10 @@ console.log(kennan.speak());
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
 
-let antonietta = {
-  multiplyNums: function(num1, num2) {
-    const product = num1 * num2;
-  }
+Antonietta.multiplyNums = function (a, b) {
+  console.log(a * b);
 };
-console.log(antonietta.multiplyNums(3, 4));
+console.log(Antonietta.multiplyNums(3, 4));
 // === Great work! === Head over to the the arrays.js. You may come back and attempt the Stretch Challenge once you have completed the challenges in arrays.js and function-conversion.js.
 
 // ==== Stretch Challenge: Nested Objects and the this keyword ====
