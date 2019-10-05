@@ -399,4 +399,6 @@ for (let i = 0; i < inventory.length; i++) {
   }
 }
 
-console.log(JSON.stringify(BMWAndAudi, null, 2));
+console.log(
+  JSON.stringify(BMWAndAudi, ['car_make', 'car_model', 'car_year'], 2)
+);
