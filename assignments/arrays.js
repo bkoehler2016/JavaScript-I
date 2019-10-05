@@ -2,8 +2,7 @@
 
 // The car dealer has all of their inventory housed in the array seen below.  Scroll down past the data to find out how you can help the car dealer.
 
-let inventory = [
-  {
+let inventory = [{
     id: 1,
     car_make: 'Lincoln',
     car_model: 'Navigator',
@@ -328,16 +327,7 @@ let inventory = [
 function findCarId(id) {
   for (i = 0; i < inventory.length; i++) {
     if (inventory[i].id === id) {
-      return (
-        `Car ` +
-        id +
-        ` is a ` +
-        inventory[i].car_year +
-        ` ` +
-        inventory[i].car_make +
-        ` ` +
-        inventory[i].car_model
-      );
+      return (`Car ${id} is a ${inventory[i].car_year} ${inventory[i].car_make} ${inventory[i].car_model}`);
     }
   }
 }
@@ -349,12 +339,7 @@ let lastCar = 0;
 
 for (let i = 0; i < inventory.length; i++) {
   if (inventory[i] === inventory[inventory.length - 1]) {
-    console.log(
-      `The last car is a ` +
-        inventory[i].car_make +
-        ` ` +
-        inventory[i].car_model
-    );
+    console.log(`The last car is a ${inventory[i].car_make} ${inventory[i].car_model}`);
   }
 }
 
@@ -387,7 +372,7 @@ for (let i = 0; i < inventory.length; i++) {
     oldCars.push(carYears[i]);
   }
 }
-console.log(`There are ` + ` ` + oldCars.length + ` cars older than 2000.`);
+console.log(`There are ${oldCars.length} cars older than 2000.`);
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory. Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
